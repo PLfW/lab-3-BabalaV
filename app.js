@@ -37,6 +37,10 @@ var uristring =
       }
     });
 
+mongoose.connect('mongodb://localhost/book_manager');
+var db = mongoose.connection;
+
+
 app.use(express.static(path.join(__dirname, '../client')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
